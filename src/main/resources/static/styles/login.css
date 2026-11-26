@@ -1,0 +1,137 @@
+
+.login-body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #080a0d;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 38px;
+    background: #171d25;
+    border: 1px solid #303a46;
+    border-radius: 14px;
+}
+
+.login-logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 35px;
+}
+
+.login-logo > i {
+    color: #f5b800;
+    font-size: 38px;
+}
+
+.login-logo div {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-logo strong {
+    color: white;
+    font-size: 19px;
+    line-height: 1.1;
+}
+
+.login-logo strong:nth-child(2) {
+    color: #f5b800;
+}
+
+.login-logo small {
+    color: #8993a0;
+    font-size: 9px;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.login-card h1 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.login-card > p {
+    color: #aeb8c5;
+    font-size: 13px;
+    margin-bottom: 28px;
+}
+
+.login-card label {
+    display: block;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.login-input {
+    display: flex;
+    align-items: center;
+    background: #0e1218;
+    border: 1px solid #343d49;
+    border-radius: 7px;
+}
+
+.login-input:focus-within {
+    border-color: #f5b800;
+}
+
+.login-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.login-input button {
+    padding: 12px;
+    background: transparent;
+    color: #aeb8c5;
+    cursor: pointer;
+}
+
+.login-button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background: #f5b800;
+    color: #111;
+    border: none;
+    border-radius: 7px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background: #ffd044;
+}
+
+#login-error {
+    display: none;
+    color: #ef5350;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+.login-back {
+    display: block;
+    margin-top: 25px;
+    color: #aeb8c5;
+    text-align: center;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.login-back:hover {
+    color: #f5b800;
+}

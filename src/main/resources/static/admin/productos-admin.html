@@ -1,0 +1,576 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Administrar productos | Mundo Repuestos</title>
+
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="../styles/productos-admin.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="admin-body">
+
+    <div class="admin-layout">
+
+        <!-- MENU LATERAL -->
+        <aside class="admin-sidebar">
+
+            <div class="admin-logo">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <div>
+                    <strong>MUNDO</strong>
+                    <strong>REPUESTOS</strong>
+                    <small>ADMINISTRACIÓN</small>
+                </div>
+
+            </div>
+
+            <div class="sidebar-section">
+                <span>MENÚ PRINCIPAL</span>
+            </div>
+
+            <nav class="admin-navigation">
+
+                <a href="panel-principal.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Panel principal</span>
+                </a>
+
+                <a href="productos-admin.html" class="active">
+                    <i class="fa-solid fa-box"></i>
+                    <span>Productos</span>
+                </a>
+
+                <a href="inventario.html">
+                    <i class="fa-solid fa-warehouse"></i>
+                    <span>Inventario</span>
+                </a>
+
+                <a href="pedidos.html">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Pedidos</span>
+                </a>
+
+                <a href="vehiculos.html">
+                    <i class="fa-solid fa-car"></i>
+                    <span>Vehículos</span>
+                </a>
+
+                <a href="compatibilidad.html">
+                    <i class="fa-solid fa-link"></i>
+                    <span>Compatibilidad</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-section">
+                <span>OTROS</span>
+            </div>
+
+            <nav class="admin-navigation">
+
+
+                <a href="../index.html">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Ver tienda</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <div class="admin-profile-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div>
+                    <strong>Administrador</strong>
+                    <small>Propietario de tienda</small>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="admin-main">
+
+
+            <!-- ENCABEZADO -->
+            <header class="admin-topbar">
+
+                <div>
+                    <h1>Administrar productos</h1>
+                    <p>Registra y administra tus repuestos.</p>
+                </div>
+
+                <div class="admin-top-actions">
+
+                    <a href="../index.html" title="Ver tienda">
+                        <i class="fa-solid fa-store"></i>
+                    </a>
+
+                    <div class="admin-user">
+
+                        <i class="fa-solid fa-circle-user"></i>
+
+                        <div>
+                            <strong>Administrador</strong>
+                            <small>Propietario</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- BIENVENIDA -->
+            <section class="products-admin-welcome">
+
+                <div>
+                    <span>GESTIÓN DE INVENTARIO</span>
+
+                    <h2>Administración de repuestos</h2>
+
+                    <p>
+                        Agrega nuevos productos, actualiza sus datos
+                        y administra las existencias de tu tienda.
+                    </p>
+                </div>
+
+                <i class="fa-solid fa-boxes-stacked"></i>
+
+            </section>
+
+
+            <!-- FORMULARIO DE PRODUCTOS -->
+            <section class="product-form-section">
+
+                <div class="admin-section-heading">
+
+                    <div>
+                        <h2 id="form-title">
+                            <i class="fa-solid fa-circle-plus"></i>
+                            Registrar nuevo producto
+                        </h2>
+
+                        <p>
+                            Completa la información del repuesto.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <form id="form-producto" class="product-admin-form">
+
+
+                    <!-- FOTOGRAFIA -->
+                    <div class="product-upload-section">
+
+                        <label for="imagen-producto">
+                            Fotografía del repuesto
+                        </label>
+
+                        <div class="product-upload-area" id="upload-area">
+
+                            <div id="preview-imagen">
+
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                                <strong>Seleccionar fotografía</strong>
+
+                                <span>
+                                    Haz clic para buscar una imagen
+                                    en tu computador.
+                                </span>
+
+                            </div>
+
+                            <input
+                                type="file"
+                                id="imagen-producto"
+                                name="imagen"
+                                accept="image/*"
+                            >
+
+                        </div>
+
+                        <small>
+                            Formatos permitidos: JPG, JPEG, PNG y WEBP.
+                        </small>
+
+                    </div>
+
+
+                    <!-- INFORMACION GENERAL -->
+                    <div class="product-form-heading">
+                        <i class="fa-solid fa-file-lines"></i>
+                        Información general
+                    </div>
+
+
+                    <div class="product-form-grid">
+
+
+                        <div class="product-form-field">
+
+                            <label for="nombre-producto">
+                                Nombre del producto *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombre-producto"
+                                name="nombre"
+                                placeholder="Ej. Amortiguador delantero"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="product-form-field">
+
+                            <label for="referencia-producto">
+                                Referencia *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="referencia-producto"
+                                name="referencia"
+                                placeholder="Ej. 54650H9150"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="product-form-field">
+
+                            <label for="marca-producto">
+                                Marca del repuesto *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="marca-producto"
+                                name="marca"
+                                placeholder="Ej. Kia Mobis"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="product-form-field">
+
+                            <label for="categoria-producto">
+                                Categoría *
+                            </label>
+
+                            <select
+                                id="categoria-producto"
+                                name="categoria"
+                                required
+                            >
+
+                                <option value="">Seleccionar categoría</option>
+                                <option value="Motor">Motor</option>
+                                <option value="Suspensión">Suspensión</option>
+                                <option value="Frenos">Frenos</option>
+                                <option value="Eléctrico">Eléctrico</option>
+                                <option value="Iluminación">Iluminación</option>
+                                <option value="Refrigeración">Refrigeración</option>
+                                <option value="Carrocería">Carrocería</option>
+                                <option value="Transmisión">Transmisión</option>
+                                <option value="Otros">Otros</option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="product-form-field">
+                            <label for="precio-compra">
+                                Precio de compra *
+                            </label>
+
+                            <input
+                                type="number"
+                                id="precio-compra"
+                                name="precio_compra"
+                                placeholder="Ej. 120000"
+                                min="0"
+                                step="0.01"
+                                required
+                            >
+                        </div>
+
+                        <div class="product-form-field">
+                            <label for="precio-producto">
+                                Precio de venta *
+                            </label>
+
+                            <input
+                                type="number"
+                                id="precio-producto"
+                                name="precio_venta"
+                                placeholder="Ej. 180000"
+                                min="0"
+                                step="0.01"
+                                required
+                            >
+                        </div>
+
+
+
+                        <div class="product-form-field">
+
+                            <label for="stock-producto">
+                                Cantidad disponible *
+                            </label>
+
+                            <input
+                                type="number"
+                                id="stock-producto"
+                                name="stock"
+                                placeholder="Ej. 12"
+                                min="0"
+                                step="1"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="product-form-field">
+
+                            <label for="stock-minimo">
+                                Stock mínimo
+                            </label>
+
+                            <input
+                                type="number"
+                                id="stock-minimo"
+                                name="stock_minimo"
+                                placeholder="Ej. 3"
+                                min="0"
+                                value="3"
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- DESCRIPCION -->
+                    <div class="product-form-heading">
+                        <i class="fa-solid fa-align-left"></i>
+                        Descripción del producto
+                    </div>
+
+
+                    <div class="product-form-field full-width">
+
+                        <label for="descripcion-producto">
+                            Descripción *
+                        </label>
+
+                        <textarea
+                            id="descripcion-producto"
+                            name="descripcion"
+                            rows="4"
+                            placeholder="Describe el repuesto, sus características y su función..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- COMPATIBILIDAD -->
+                    <div class="product-form-heading">
+                        <i class="fa-solid fa-car-side"></i>
+                        Vehículos compatibles
+                    </div>
+
+
+                    <div class="product-form-field full-width">
+
+                        <label for="vehiculos-compatibles">
+                            Vehículos compatibles
+                        </label>
+
+                        <select
+                            id="vehiculos-compatibles"
+                            name="compatibles"
+                            multiple
+                            size="6"
+                        >
+
+                            <!-- JavaScript cargará los vehículos registrados -->
+
+                        </select>
+
+                        <small>
+                            Mantén presionada la tecla Ctrl mientras haces clic
+                            para seleccionar varios vehículos.
+                        </small>
+
+                    </div>
+
+
+                    <div class="product-form-field">
+                        <label for="estado-producto">
+                            Estado del producto *
+                        </label>
+
+                        <select id="estado-producto" name="estado" required>
+                            <option value="ACTIVO">ACTIVO</option>
+                            <option value="INACTIVO">INACTIVO</option>
+                        </select>
+                    </div>
+
+
+
+                    <!-- BOTONES -->
+                    <div class="product-form-actions">
+
+                        <button
+                            type="reset"
+                            class="product-cancel-button"
+                            id="cancelar-producto">
+
+                            <i class="fa-solid fa-rotate-left"></i>
+                            Limpiar formulario
+
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            class="product-save-button">
+
+                            <i class="fa-solid fa-floppy-disk"></i>
+                            GUARDAR PRODUCTO
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- LISTADO DE PRODUCTOS -->
+            <section class="registered-products-section">
+
+
+                <div class="admin-section-heading">
+
+                    <div>
+                        <h2>Productos registrados</h2>
+
+                        <p>
+                            Consulta y administra los repuestos
+                            de tu tienda.
+                        </p>
+                    </div>
+
+                    <span class="registered-count" id="cantidad-registrados">
+                        0 productos
+                    </span>
+
+                </div>
+
+
+                <!-- BUSCADOR -->
+                <div class="registered-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="search"
+                        id="buscar-producto-admin"
+                        placeholder="Buscar por nombre, marca o referencia..."
+                    >
+
+                </div>
+
+
+                <!-- TABLA -->
+                <div class="registered-table-container">
+
+                    <table class="registered-products-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Producto</th>
+                                <th>Referencia</th>
+                                <th>Marca</th>
+                                <th>Precio</th>
+                                <th>Stock</th>
+                                <th>Acciones</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="lista-productos-admin">
+
+                            <!-- JavaScript mostrará los productos -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div id="sin-productos" class="empty-products-message">
+
+                    <i class="fa-solid fa-box-open"></i>
+
+                    <h3>Aún no tienes productos registrados</h3>
+
+                    <p>
+                        Utiliza el formulario para agregar
+                        tu primer repuesto.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- PIE -->
+            <footer class="admin-footer">
+
+                © 2026 Mundo Repuestos · Administración de productos
+
+            </footer>
+
+
+        </main>
+
+    </div>
+</body>
+
+</html>

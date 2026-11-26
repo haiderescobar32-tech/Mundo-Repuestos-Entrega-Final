@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso administrativo | Mundo Repuestos</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="login-body">
+
+    <main class="login-card">
+
+        <div class="login-logo">
+            <i class="fa-solid fa-gear"></i>
+            <div>
+                <strong>MUNDO</strong>
+                <strong>REPUESTOS</strong>
+                <small>ADMINISTRACIÓN</small>
+            </div>
+        </div>
+
+        <h1>Acceso administrativo</h1>
+        <p>Ingresa tu contraseña para continuar.</p>
+
+        <form id="login-form">
+
+            <label for="password-admin">Contraseña</label>
+
+            <div class="login-input">
+                <input
+                    type="password"
+                    id="password-admin"
+                    placeholder="Ingresa tu contraseña"
+                    required
+                >
+
+                <button type="button" id="mostrar-password">
+                    <i class="fa-solid fa-eye"></i>
+                </button>
+            </div>
+
+            <p id="login-error"></p>
+
+            <button type="submit" class="login-button">
+                <i class="fa-solid fa-lock"></i>
+                INGRESAR AL PANEL
+            </button>
+
+        </form>
+
+        <a href="../index.html" class="login-back">
+            <i class="fa-solid fa-arrow-left"></i>
+            Volver a la tienda
+        </a>
+
+    </main>
+
+    <script src="../scripts/login.js"></script>
+
+</body>
+</html>

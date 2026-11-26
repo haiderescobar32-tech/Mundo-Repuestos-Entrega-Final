@@ -1,0 +1,470 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Administrar vehículos | Mundo Repuestos</title>
+
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="../styles/vehiculos.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="admin-body">
+
+    <div class="admin-layout">
+
+        <!-- MENU LATERAL -->
+        <aside class="admin-sidebar">
+
+            <div class="admin-logo">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <div>
+                    <strong>MUNDO</strong>
+                    <strong>REPUESTOS</strong>
+                    <small>ADMINISTRACIÓN</small>
+                </div>
+
+            </div>
+
+            <div class="sidebar-section">
+                <span>MENÚ PRINCIPAL</span>
+            </div>
+
+            <nav class="admin-navigation">
+
+                <a href="panel-principal.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Panel principal</span>
+                </a>
+
+                <a href="productos-admin.html">
+                    <i class="fa-solid fa-box"></i>
+                    <span>Productos</span>
+                </a>
+
+                <a href="inventario.html">
+                    <i class="fa-solid fa-warehouse"></i>
+                    <span>Inventario</span>
+                </a>
+
+                <a href="pedidos.html">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Pedidos</span>
+                </a>
+
+                <a href="vehiculos.html" class="active">
+                    <i class="fa-solid fa-car"></i>
+                    <span>Vehículos</span>
+                </a>
+
+                <a href="compatibilidad.html">
+                    <i class="fa-solid fa-link"></i>
+                    <span>Compatibilidad</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-section">
+                <span>OTROS</span>
+            </div>
+
+            <nav class="admin-navigation">
+
+                <a href="../index.html">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Ver tienda</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <div class="admin-profile-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div>
+                    <strong>Administrador</strong>
+                    <small>Propietario de tienda</small>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="admin-main">
+
+
+            <!-- ENCABEZADO -->
+            <header class="admin-topbar">
+
+                <div>
+                    <h1>Administración de vehículos</h1>
+                    <p>Registra y administra los vehículos de tus clientes.</p>
+                </div>
+
+                <div class="admin-top-actions">
+
+                    <div class="admin-user">
+
+                        <i class="fa-solid fa-circle-user"></i>
+
+                        <div>
+                            <strong>Administrador</strong>
+                            <small>Propietario</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- BIENVENIDA -->
+            <section class="vehicles-welcome">
+
+                <div>
+
+                    <span>CATÁLOGO AUTOMOTRIZ</span>
+
+                    <h2>Gestión de vehículos</h2>
+
+                    <p>
+                        Registra las marcas, líneas, modelos y motores
+                        para relacionarlos con los repuestos de tu tienda.
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-car-side"></i>
+
+            </section>
+
+
+            <!-- ESTADISTICAS -->
+            <section class="vehicles-stats">
+
+                <article class="vehicle-stat-card">
+
+                    <div class="vehicle-stat-icon yellow">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+
+                    <div>
+                        <span>Total de vehículos</span>
+                        <h2 id="total-vehiculos">0</h2>
+                        <small>Vehículos registrados</small>
+                    </div>
+
+                </article>
+
+
+                <article class="vehicle-stat-card">
+
+                    <div class="vehicle-stat-icon blue">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+
+                    <div>
+                        <span>Marcas registradas</span>
+                        <h2 id="total-marcas">0</h2>
+                        <small>Marcas diferentes</small>
+                    </div>
+
+                </article>
+
+
+                <article class="vehicle-stat-card">
+
+                    <div class="vehicle-stat-icon green">
+                        <i class="fa-solid fa-link"></i>
+                    </div>
+
+                    <div>
+                        <span>Modelos registrados</span>
+                        <h2 id="total-modelos">0</h2>
+                        <small>Líneas de vehículos</small>
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- FORMULARIO -->
+            <section class="vehicles-form-section">
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <h2 id="vehicle-form-title">
+                            <i class="fa-solid fa-circle-plus"></i>
+                            Registrar nuevo vehículo
+                        </h2>
+
+                        <p>
+                            Ingresa las características del automóvil.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form id="form-vehiculo">
+
+
+                    <div class="vehicle-form-grid">
+
+
+                        <div class="vehicle-form-field">
+
+                            <label for="marca-vehiculo">
+                                Marca del vehículo *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="marca-vehiculo"
+                                placeholder="Ej. Kia"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="vehicle-form-field">
+
+                            <label for="linea-vehiculo">
+                                Línea o modelo *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="linea-vehiculo"
+                                placeholder="Ej. Rio"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="vehicle-form-field">
+
+                            <label for="anio-vehiculo">
+                                Año *
+                            </label>
+
+                            <input
+                                type="number"
+                                id="anio-vehiculo"
+                                placeholder="Ej. 2019"
+                                min="1950"
+                                max="2035"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="vehicle-form-field">
+
+                            <label for="motor-vehiculo">
+                                Motor *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="motor-vehiculo"
+                                placeholder="Ej. 1.4"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="vehicle-form-field">
+
+                            <label for="combustible-vehiculo">
+                                Combustible *
+                            </label>
+
+                            <select id="combustible-vehiculo" required>
+
+                                <option value="">Seleccionar</option>
+                                <option value="Gasolina">Gasolina</option>
+                                <option value="Diésel">Diésel</option>
+                                <option value="Híbrido">Híbrido</option>
+                                <option value="Eléctrico">Eléctrico</option>
+                                <option value="Gas">Gas</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="vehicle-form-field">
+
+                            <label for="transmision-vehiculo">
+                                Transmisión *
+                            </label>
+
+                            <select id="transmision-vehiculo" required>
+
+                                <option value="">Seleccionar</option>
+                                <option value="Manual">Manual</option>
+                                <option value="Automática">Automática</option>
+                                
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- BOTONES -->
+                    <div class="vehicle-form-actions">
+
+                        <button
+                            type="reset"
+                            class="vehicle-cancel-button"
+                            id="limpiar-vehiculo">
+
+                            <i class="fa-solid fa-rotate-left"></i>
+                            Limpiar formulario
+
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            class="vehicle-save-button">
+
+                            <i class="fa-solid fa-floppy-disk"></i>
+                            GUARDAR VEHÍCULO
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- LISTADO DE VEHICULOS -->
+            <section class="vehicles-list-section">
+
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <h2>Vehículos registrados</h2>
+
+                        <p>
+                            Consulta, modifica y elimina los vehículos
+                            de tu catálogo automotriz.
+                        </p>
+
+                    </div>
+
+                    <span id="cantidad-vehiculos" class="vehicles-counter">
+                        0 vehículos
+                    </span>
+
+                </div>
+
+
+                <!-- BUSCADOR -->
+                <div class="vehicles-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="search"
+                        id="buscar-vehiculo"
+                        placeholder="Buscar por marca, línea, año o motor..."
+                    >
+
+                </div>
+
+
+                <!-- TABLA -->
+                <div class="vehicles-table-container">
+
+                    <table class="vehicles-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Marca</th>
+                                <th>Línea</th>
+                                <th>Año</th>
+                                <th>Motor</th>
+                                <th>Combustible</th>
+                                <th>Acciones</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="tabla-vehiculos">
+
+                            <!-- JavaScript cargará los vehículos -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- MENSAJE VACIO -->
+                <div id="vehiculos-vacios" class="vehicles-empty">
+
+                    <i class="fa-solid fa-car-side"></i>
+
+                    <h3>No hay vehículos registrados</h3>
+
+                    <p>
+                        Registra tu primer vehículo utilizando
+                        el formulario superior.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- PIE -->
+            <footer class="admin-footer">
+
+                © 2026 Mundo Repuestos · Administración de vehículos
+
+            </footer>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="../scripts/vehiculos.js"></script>
+
+</body>
+
+</html>

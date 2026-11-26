@@ -1,0 +1,641 @@
+
+/* ==========================================
+   MUNDO REPUESTOS - ADMINISTRAR PRODUCTOS
+   ========================================== */
+
+
+/* 1. BIENVENIDA */
+
+.products-admin-welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 28px 32px;
+    margin-bottom: 30px;
+
+    background: linear-gradient(110deg, #202832, #121820);
+    border: 1px solid #303a46;
+    border-radius: 12px;
+}
+
+.products-admin-welcome span {
+    color: var(--color-primary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.products-admin-welcome h2 {
+    color: white;
+    font-size: 23px;
+    margin: 9px 0;
+}
+
+.products-admin-welcome p {
+    color: #aeb8c5;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.products-admin-welcome > i {
+    color: var(--color-primary);
+    font-size: 55px;
+}
+
+
+/* 2. SECCIONES */
+
+.product-form-section,
+.registered-products-section {
+    padding: 25px;
+    margin-bottom: 28px;
+
+    background: #171d25;
+    border: 1px solid #29313b;
+    border-radius: 11px;
+}
+
+.admin-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin-bottom: 24px;
+}
+
+.admin-section-heading h2 {
+    color: white;
+    font-size: 17px;
+}
+
+.admin-section-heading h2 i {
+    color: var(--color-primary);
+    margin-right: 8px;
+}
+
+.admin-section-heading p {
+    color: #8993a0;
+    font-size: 11px;
+    margin-top: 6px;
+}
+
+.registered-count {
+    padding: 9px 13px;
+    background: #252d38;
+    border-radius: 7px;
+
+    color: var(--color-primary);
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* 3. ZONA PARA SUBIR FOTOGRAFIAS */
+
+.product-upload-section {
+    margin-bottom: 30px;
+}
+
+.product-upload-section > label {
+    display: block;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.product-upload-area {
+    position: relative;
+
+    width: 100%;
+    max-width: 430px;
+    min-height: 210px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #10151c;
+    border: 2px dashed #46515f;
+    border-radius: 10px;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.product-upload-area:hover {
+    border-color: var(--color-primary);
+    background: #151c25;
+}
+
+.product-upload-area > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 20px;
+    text-align: center;
+}
+
+.product-upload-area i {
+    color: var(--color-primary);
+    font-size: 38px;
+}
+
+.product-upload-area strong {
+    color: white;
+    font-size: 13px;
+}
+
+.product-upload-area span {
+    color: #8993a0;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.product-upload-area input {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.product-upload-section > small {
+    display: block;
+    color: #8993a0;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+/* VISTA PREVIA DE FOTOGRAFIA */
+
+#preview-imagen {
+    width: 100%;
+    min-height: 205px;
+}
+
+#preview-imagen img {
+    width: 100%;
+    height: 205px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+
+/* 4. TITULOS INTERNOS DEL FORMULARIO */
+
+.product-form-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+
+    padding: 15px 0;
+    margin: 10px 0 18px;
+
+    border-top: 1px solid #303a46;
+}
+
+.product-form-heading i {
+    color: var(--color-primary);
+    font-size: 16px;
+}
+
+
+/* 5. DISTRIBUCION DEL FORMULARIO */
+
+.product-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 19px;
+}
+
+.product-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    min-width: 0;
+}
+
+.product-form-field.full-width {
+    width: 100%;
+}
+
+.product-form-field label {
+    color: #e4e7eb;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.product-form-field input,
+.product-form-field select,
+.product-form-field textarea {
+    width: 100%;
+    min-width: 0;
+
+    padding: 12px 13px;
+
+    background: #0e1218;
+    border: 1px solid #343d49;
+    border-radius: 7px;
+
+    color: white;
+    font-size: 12px;
+
+    outline: none;
+    transition: var(--transition);
+}
+
+.product-form-field input::placeholder,
+.product-form-field textarea::placeholder {
+    color: #737d89;
+}
+
+.product-form-field select {
+    cursor: pointer;
+}
+
+.product-form-field select option {
+    background: #171d25;
+    color: white;
+}
+
+.product-form-field textarea {
+    resize: vertical;
+    line-height: 1.6;
+    min-height: 100px;
+}
+
+.product-form-field input:focus,
+.product-form-field select:focus,
+.product-form-field textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(245, 184, 0, 0.08);
+}
+
+.product-form-field small {
+    color: #8993a0;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+/* 6. BOTONES DEL FORMULARIO */
+
+.product-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+
+    margin-top: 28px;
+    padding-top: 22px;
+
+    border-top: 1px solid #303a46;
+}
+
+.product-form-actions button {
+    min-height: 44px;
+    padding: 11px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: 800;
+
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.product-cancel-button {
+    background: transparent;
+    border: 1px solid #46515f;
+    color: #c5cbd3;
+}
+
+.product-cancel-button:hover {
+    background: #252d38;
+}
+
+.product-save-button {
+    background: var(--color-primary);
+    color: #111;
+    border: none;
+}
+
+.product-save-button:hover {
+    background: var(--color-primary-hover);
+    transform: translateY(-2px);
+}
+
+
+/* 7. BUSCADOR DE PRODUCTOS */
+
+.registered-search {
+    width: 100%;
+    max-width: 500px;
+
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    padding: 12px 15px;
+    margin-bottom: 20px;
+
+    background: #10151c;
+    border: 1px solid #343d49;
+    border-radius: 7px;
+}
+
+.registered-search i {
+    color: var(--color-primary);
+    font-size: 14px;
+}
+
+.registered-search input {
+    width: 100%;
+    min-width: 0;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: white;
+    font-size: 12px;
+}
+
+.registered-search input::placeholder {
+    color: #737d89;
+}
+
+
+/* 8. TABLA DE PRODUCTOS */
+
+.registered-table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.registered-products-table {
+    width: 100%;
+    min-width: 750px;
+
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.registered-products-table th {
+    padding: 15px 12px;
+
+    color: #8993a0;
+    background: #202630;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    border-bottom: 1px solid #343d49;
+}
+
+.registered-products-table td {
+    padding: 13px 12px;
+
+    color: #d4d9e0;
+    font-size: 11px;
+
+    border-bottom: 1px solid #29313b;
+}
+
+.registered-products-table tbody tr {
+    transition: var(--transition);
+}
+
+.registered-products-table tbody tr:hover {
+    background: #202630;
+}
+
+
+/* 9. IMAGENES DE LA TABLA */
+
+.admin-product-image {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #252d38;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.admin-product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 3px;
+}
+
+.admin-product-image i {
+    color: var(--color-primary);
+    font-size: 19px;
+}
+
+
+/* 10. PRECIO Y EXISTENCIAS */
+
+.admin-product-price {
+    color: var(--color-primary) !important;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.admin-product-stock {
+    color: #20c56b !important;
+    font-weight: 700;
+}
+
+.admin-product-stock.low {
+    color: #f5b800 !important;
+}
+
+.admin-product-stock.empty {
+    color: #ef5350 !important;
+}
+
+
+/* 11. BOTONES DE ACCIONES */
+
+.admin-product-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-product-actions button {
+    width: 31px;
+    height: 31px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+    background: #252d38;
+
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.admin-product-actions .edit-product {
+    color: #60a5fa;
+}
+
+.admin-product-actions .edit-product:hover {
+    background: #2563eb;
+    color: white;
+}
+
+.admin-product-actions .delete-product {
+    color: #ef5350;
+}
+
+.admin-product-actions .delete-product:hover {
+    background: #dc2626;
+    color: white;
+}
+
+
+/* 12. MENSAJE SIN PRODUCTOS */
+
+.empty-products-message {
+    display: none;
+
+    padding: 50px 20px;
+    text-align: center;
+
+    background: #10151c;
+    border-radius: 9px;
+}
+
+.empty-products-message i {
+    color: var(--color-primary);
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.empty-products-message h3 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.empty-products-message p {
+    color: #8993a0;
+    font-size: 11px;
+}
+
+
+/* 13. TABLETS */
+
+@media (max-width: 900px) {
+
+    .product-form-section,
+    .registered-products-section {
+        padding: 20px;
+    }
+
+    .products-admin-welcome {
+        padding: 23px;
+    }
+
+}
+
+
+/* 14. CELULARES */
+
+@media (max-width: 600px) {
+
+    .products-admin-welcome {
+        padding: 18px;
+    }
+
+    .products-admin-welcome h2 {
+        font-size: 19px;
+    }
+
+    .products-admin-welcome > i {
+        font-size: 35px;
+    }
+
+    .product-form-section,
+    .registered-products-section {
+        padding: 15px;
+    }
+
+    .product-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-form-actions {
+        flex-direction: column;
+    }
+
+    .product-form-actions button {
+        width: 100%;
+    }
+
+    .admin-section-heading {
+        align-items: flex-start;
+    }
+
+    .registered-count {
+        font-size: 9px;
+    }
+
+    .product-upload-area {
+        max-width: 100%;
+    }
+
+    
+    /* SELECTOR DE VEHICULOS COMPATIBLES */
+
+    #vehiculos-compatibles {
+        min-height: 155px;
+        padding: 10px;
+        background: #0e1218;
+        color: white;
+        border: 1px solid #343d49;
+        border-radius: 7px;
+        font-size: 12px;
+    }
+
+    #vehiculos-compatibles option {
+        padding: 9px;
+    }
+
+    #vehiculos-compatibles option:checked {
+        background: #f5b800 linear-gradient(#f5b800, #f5b800);
+        color: #111;
+    }
+
+}

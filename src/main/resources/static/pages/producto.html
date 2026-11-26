@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detalle del producto | Mundo Repuestos</title>
+
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/producto.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+
+        <a href="../index.html" class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-gear"></i>
+            </div>
+
+            <div class="logo-text">
+                <span>MUNDO</span>
+                <strong>REPUESTOS</strong>
+                <small>THE WORLD OF AUTO PARTS</small>
+            </div>
+
+        </a>
+
+        <nav class="navigation">
+
+            <a href="../index.html">Inicio</a>
+            <a href="catalogo.html" class="active">Catálogo</a>
+            <a href="../index.html#categorias">Categorías</a>
+            <a href="../index.html#marcas">Marcas</a>
+            <a href="../index.html#promociones">Promociones</a>
+            <a href="../index.html#contacto">Contacto</a>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <button aria-label="Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <a href="carrito.html" aria-label="Carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+
+            <button aria-label="Mi cuenta">
+                <i class="fa-solid fa-user"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTENIDO DEL PRODUCTO -->
+    <main class="product-detail-page">
+
+        <!-- RUTA DE NAVEGACION -->
+        <div class="product-breadcrumb">
+
+            <a href="../index.html">Inicio</a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <a href="catalogo.html">Catálogo</a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span id="breadcrumb-product">Producto</span>
+
+        </div>
+
+
+        <!-- INFORMACION PRINCIPAL -->
+        <section class="product-detail-layout">
+
+            <!-- GALERIA DE IMAGENES -->
+            <div class="product-gallery">
+
+                <div class="product-thumbnails" id="product-thumbnails">
+
+                    <!-- Miniaturas generadas con JavaScript -->
+
+                </div>
+
+                <div class="product-main-image" id="product-main-image">
+
+                    <div class="product-image-fallback">
+                        <i class="fa-solid fa-car-side"></i>
+                    </div>
+
+                    <span class="image-label">
+                        IMAGEN DEL PRODUCTO
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- INFORMACION DEL PRODUCTO -->
+            <div class="product-main-info">
+
+                <div class="product-category-label" id="product-category">
+                    REPUESTO AUTOMOTRIZ
+                </div>
+
+                <h1 id="product-name">
+                    Cargando producto...
+                </h1>
+
+                <div class="product-brand-reference">
+
+                    <span>
+                        Marca:
+                        <strong id="product-brand">-</strong>
+                    </span>
+
+                    <span>
+                        Referencia:
+                        <strong id="product-reference">-</strong>
+                    </span>
+
+                </div>
+
+
+                <div class="product-price-detail" id="product-price">
+                    $0
+                </div>
+
+
+                <div class="product-availability">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <span id="product-stock">
+                        Consultando disponibilidad...
+                    </span>
+
+                </div>
+
+
+                <!-- CANTIDAD -->
+                <div class="product-quantity">
+
+                    <label for="product-quantity">
+                        Cantidad:
+                    </label>
+
+                    <div class="quantity-control">
+
+                        <button id="quantity-minus" type="button">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+
+                        <input
+                            type="number"
+                            id="product-quantity"
+                            value="1"
+                            min="1"
+                        >
+
+                        <button id="quantity-plus" type="button">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOTONES -->
+                <div class="product-purchase-buttons">
+
+                    <button class="product-add-cart" id="add-product-cart">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        AGREGAR AL CARRITO
+
+                    </button>
+
+                    <a href="carrito.html" class="product-buy-now">
+
+                        COMPRAR AHORA
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- INFORMACION ADICIONAL -->
+                <div class="product-assurance">
+
+                    <div>
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Compra confiable</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <span>Envíos disponibles</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- COMPATIBILIDAD -->
+            <aside class="product-compatibility">
+
+                <div class="compatibility-heading">
+
+                    <i class="fa-solid fa-car-side"></i>
+
+                    <h2>Vehículos compatibles</h2>
+
+                </div>
+
+                <p>
+                    Consulta los vehículos para los que
+                    está registrado este repuesto.
+                </p>
+
+                <div
+                    class="compatible-vehicles"
+                    id="compatible-vehicles">
+
+                    <!-- Vehículos cargados con JavaScript -->
+
+                </div>
+
+                <div class="compatibility-warning">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    Verifica la referencia y las especificaciones
+                    antes de realizar tu compra.
+
+                </div>
+
+            </aside>
+
+        </section>
+
+
+        <!-- DESCRIPCION Y ESPECIFICACIONES -->
+        <section class="product-extra-info">
+
+            <div class="product-tabs">
+
+                <button class="product-tab active" data-tab="description">
+                    Descripción
+                </button>
+
+                <button class="product-tab" data-tab="specifications">
+                    Especificaciones
+                </button>
+
+            </div>
+
+
+            <div class="product-tab-content" id="description">
+
+                <h2>Descripción del producto</h2>
+
+                <p id="product-description">
+                    Información del producto.
+                </p>
+
+            </div>
+
+
+            <div class="product-tab-content hidden" id="specifications">
+
+                <h2>Características del repuesto</h2>
+
+                <div class="specifications-list" id="product-specifications">
+
+                    <!-- Especificaciones cargadas con JavaScript -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- VOLVER AL CATALOGO -->
+        <div class="back-to-catalog">
+
+            <a href="catalogo.html" class="btn-secondary">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Volver al catálogo
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- PIE DE PAGINA -->
+    <footer class="footer">
+
+        <div class="footer-brand">
+
+            <h2>MUNDO <span>REPUESTOS</span></h2>
+
+            <p>THE WORLD OF AUTO PARTS</p>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            © 2026 Mundo Repuestos. Todos los derechos reservados.
+
+        </div>
+
+    </footer>
+
+
+    <script src="../scripts/producto.js"></script>
+
+</body>
+
+</html>

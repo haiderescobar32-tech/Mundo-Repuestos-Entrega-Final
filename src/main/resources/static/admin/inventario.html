@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inventario | Mundo Repuestos</title>
+
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="../styles/inventario.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="admin-body">
+
+    <div class="admin-layout">
+
+        <!-- MENU LATERAL -->
+        <aside class="admin-sidebar">
+
+            <div class="admin-logo">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <div>
+                    <strong>MUNDO</strong>
+                    <strong>REPUESTOS</strong>
+                    <small>ADMINISTRACIÓN</small>
+                </div>
+
+            </div>
+
+            <div class="sidebar-section">
+                <span>MENÚ PRINCIPAL</span>
+            </div>
+
+            <nav class="admin-navigation">
+
+                <a href="panel-principal.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Panel principal</span>
+                </a>
+
+                <a href="productos-admin.html">
+                    <i class="fa-solid fa-box"></i>
+                    <span>Productos</span>
+                </a>
+
+                <a href="inventario.html" class="active">
+                    <i class="fa-solid fa-warehouse"></i>
+                    <span>Inventario</span>
+                </a>
+
+                <a href="pedidos.html">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Pedidos</span>
+                </a>
+
+                <a href="vehiculos.html">
+                    <i class="fa-solid fa-car"></i>
+                    <span>Vehículos</span>
+                </a>
+
+                <a href="compatibilidad.html">
+                    <i class="fa-solid fa-link"></i>
+                    <span>Compatibilidad</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-section">
+                <span>OTROS</span>
+            </div>
+
+            <nav class="admin-navigation">
+
+                <a href="../index.html">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Ver tienda</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <div class="admin-profile-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div>
+                    <strong>Administrador</strong>
+                    <small>Propietario de tienda</small>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="admin-main">
+
+
+            <!-- ENCABEZADO -->
+            <header class="admin-topbar">
+
+                <div>
+                    <h1>Control de inventario</h1>
+                    <p>Administra las existencias de tus repuestos.</p>
+                </div>
+
+                <div class="admin-top-actions">
+
+                    <a href="productos-admin.html">
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+
+                    <div class="admin-user">
+
+                        <i class="fa-solid fa-circle-user"></i>
+
+                        <div>
+                            <strong>Administrador</strong>
+                            <small>Propietario</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- BIENVENIDA -->
+            <section class="inventory-welcome">
+
+                <div>
+                    <span>GESTIÓN DE EXISTENCIAS</span>
+
+                    <h2>Inventario de repuestos</h2>
+
+                    <p>
+                        Consulta las cantidades disponibles,
+                        identifica productos agotados y actualiza
+                        las existencias de tu tienda.
+                    </p>
+                </div>
+
+                <i class="fa-solid fa-warehouse"></i>
+
+            </section>
+
+
+            <!-- ESTADISTICAS -->
+            <section class="inventory-stats">
+
+                <article class="inventory-stat-card">
+
+                    <div class="inventory-stat-icon yellow">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                    </div>
+
+                    <div>
+                        <span>Productos registrados</span>
+                        <h2 id="inventario-total">0</h2>
+                        <small>Referencias registradas</small>
+                    </div>
+
+                </article>
+
+
+                <article class="inventory-stat-card">
+
+                    <div class="inventory-stat-icon green">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <span>Disponibles</span>
+                        <h2 id="inventario-disponibles">0</h2>
+                        <small>Con existencias suficientes</small>
+                    </div>
+
+                </article>
+
+
+                <article class="inventory-stat-card">
+
+                    <div class="inventory-stat-icon orange">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+
+                    <div>
+                        <span>Stock bajo</span>
+                        <h2 id="inventario-bajo">0</h2>
+                        <small>Requieren reposición</small>
+                    </div>
+
+                </article>
+
+
+                <article class="inventory-stat-card">
+
+                    <div class="inventory-stat-icon red">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+
+                    <div>
+                        <span>Agotados</span>
+                        <h2 id="inventario-agotados">0</h2>
+                        <small>Sin existencias</small>
+                    </div>
+
+                </article>
+
+                <article class="inventory-stat-card">
+
+                    <div class="inventory-stat-icon blue">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+
+                    <div>
+                        <span>Unidades vendidas</span>
+                        <h2 id="inventario-vendidos">0</h2>
+                        <small>Ventas confirmadas</small>
+                    </div>
+
+                </article>
+                 
+            </section>
+
+
+
+            <!-- TABLA DE INVENTARIO -->
+            <section class="inventory-section">
+
+
+                <div class="inventory-heading">
+
+                    <div>
+                        <h2>Existencias de productos</h2>
+
+                        <p>
+                            Consulta y actualiza las cantidades
+                            disponibles de cada repuesto.
+                        </p>
+                    </div>
+
+                    <a href="productos-admin.html"
+                       class="inventory-add-button">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Agregar producto
+
+                    </a>
+
+                </div>
+
+
+                <!-- FILTROS -->
+                <div class="inventory-filters">
+
+                    <div class="inventory-search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="search"
+                            id="buscar-inventario"
+                            placeholder="Buscar por nombre, marca o referencia..."
+                        >
+
+                    </div>
+
+
+                    <select id="filtro-inventario">
+
+                        <option value="todos">Todos los productos</option>
+
+                        <option value="disponibles">Disponibles</option>
+
+                        <option value="bajo">Stock bajo</option>
+
+                        <option value="agotados">Agotados</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- TABLA -->
+                <div class="inventory-table-container">
+
+                    <table class="inventory-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Producto</th>
+                                <th>Referencia</th>
+                                <th>Marca</th>
+                                <th>Existencias</th>
+                                <th>Vendidos</th>
+                                <th>Stock mínimo</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="tabla-inventario">
+
+                            <!-- JavaScript cargará los productos -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- SIN PRODUCTOS -->
+                <div id="inventario-vacio" class="inventory-empty">
+
+                    <i class="fa-solid fa-box-open"></i>
+
+                    <h3>No hay productos registrados</h3>
+
+                    <p>
+                        Agrega tus primeros repuestos
+                        desde el módulo de productos.
+                    </p>
+
+                    <a href="productos-admin.html">
+                        Registrar producto
+                    </a>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- PIE -->
+            <footer class="admin-footer">
+
+                © 2026 Mundo Repuestos · Control de inventario
+
+            </footer>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="../scripts/inventario.js"></script>
+
+</body>
+
+</html>

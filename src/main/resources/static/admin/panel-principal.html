@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Panel administrativo | Mundo Repuestos</title>
+
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="admin-body">
+
+    <div class="admin-layout">
+
+        <!-- MENU LATERAL -->
+        <aside class="admin-sidebar">
+
+            <div class="admin-logo">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <div>
+                    <strong>MUNDO</strong>
+                    <strong>REPUESTOS</strong>
+                    <small>ADMINISTRACIÓN</small>
+                </div>
+
+            </div>
+
+
+            <div class="sidebar-section">
+                <span>MENÚ PRINCIPAL</span>
+            </div>
+
+
+            <nav class="admin-navigation">
+
+                <a href="panel-principal.html" class="active">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Panel principal</span>
+                </a>
+
+                <a href="productos-admin.html">
+                    <i class="fa-solid fa-box"></i>
+                    <span>Productos</span>
+                </a>
+
+                <a href="inventario.html">
+                    <i class="fa-solid fa-warehouse"></i>
+                    <span>Inventario</span>
+                </a>
+
+                <a href="pedidos.html">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Pedidos</span>
+                </a>
+
+                <a href="vehiculos.html">
+                    <i class="fa-solid fa-car"></i>
+                    <span>Vehículos</span>
+                </a>
+
+                <a href="compatibilidad.html">
+                    <i class="fa-solid fa-link"></i>
+                    <span>Compatibilidad</span>
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-section">
+                <span>OTROS</span>
+            </div>
+
+
+            <nav class="admin-navigation">
+
+        
+                <a href="../index.html">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Ver tienda</span>
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <div class="admin-profile-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div>
+                    <strong>Administrador</strong>
+                    <small>Propietario de tienda</small>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="admin-main">
+
+
+            <!-- BARRA SUPERIOR -->
+            <header class="admin-topbar">
+
+                <div>
+                    <h1>Panel principal</h1>
+                    <p>Resumen general de Mundo Repuestos.</p>
+                </div>
+
+                <div class="admin-top-actions">
+
+                    <button aria-label="Notificaciones">
+                        <i class="fa-solid fa-bell"></i>
+                    </button>
+
+                    <div class="admin-user">
+                        <i class="fa-solid fa-circle-user"></i>
+
+                        <div>
+                            <strong>Administrador</strong>
+                            <small>Propietario</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- BIENVENIDA -->
+            <section class="admin-welcome">
+
+                <div>
+                    <span>BIENVENIDO A TU TIENDA</span>
+
+                    <h2>¡Hola, administrador!</h2>
+
+                    <p>
+                        Aquí puedes controlar y administrar
+                        tu negocio de repuestos.
+                    </p>
+                </div>
+
+                <i class="fa-solid fa-gears"></i>
+
+            </section>
+
+
+            <!-- TARJETAS DE RESUMEN -->
+            <section class="admin-stats">
+
+                <article class="stat-card">
+
+                    <div class="stat-icon yellow">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+
+                    <div>
+                        <span>Total de productos</span>
+                        <h2 id="total-productos">32</h2>
+                        <small>Productos registrados</small>
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </div>
+
+                    <div>
+                        <span>Pedidos recibidos</span>
+                        <h2 id="total-pedidos">14</h2>
+                        <small>Pedidos de demostración</small>
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-icon red">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+
+                    <div>
+                        <span>Productos agotados</span>
+                        <h2 id="productos-agotados">3</h2>
+                        <small>Requieren reposición</small>
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-icon green">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <div>
+                        <span>Ventas totales</span>
+                        <h2 id="ventas-totales">$4.560.000</h2>
+                        <small>Valor de demostración</small>
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- ACCESOS RAPIDOS -->
+            <section class="admin-quick-actions">
+
+                <div class="admin-section-heading">
+                    <h2>Accesos rápidos</h2>
+                    <p>Administra tu tienda fácilmente.</p>
+                </div>
+
+
+                <div class="quick-actions-grid">
+
+                    <a href="productos-admin.html" class="quick-action-card">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        <strong>Agregar producto</strong>
+
+                        <span>Registrar un nuevo repuesto</span>
+
+                    </a>
+
+
+                    <a href="inventario.html" class="quick-action-card">
+
+                        <i class="fa-solid fa-boxes-stacked"></i>
+
+                        <strong>Ver inventario</strong>
+
+                        <span>Consultar existencias</span>
+
+                    </a>
+
+
+                    <a href="pedidos.html" class="quick-action-card">
+
+                        <i class="fa-solid fa-clipboard-check"></i>
+
+                        <strong>Ver pedidos</strong>
+
+                        <span>Gestionar las compras</span>
+
+                    </a>
+
+
+                    <a href="vehiculos.html" class="quick-action-card">
+
+                        <i class="fa-solid fa-car-side"></i>
+
+                        <strong>Agregar vehículo</strong>
+
+                        <span>Registrar nuevos modelos</span>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- INFORMACION INFERIOR -->
+            <section class="admin-bottom-grid">
+
+
+                <!-- PEDIDOS RECIENTES -->
+                <div class="admin-panel-card">
+
+                    <div class="admin-section-heading">
+
+                        <h2>Pedidos recientes</h2>
+
+                        <a href="pedidos.html">Ver todos</a>
+
+                    </div>
+
+
+                    <div class="admin-table-container">
+
+                        <table class="admin-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Pedido</th>
+                                    <th>Cliente</th>
+                                    <th>Total</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="recent-orders">
+
+                                <tr>
+                                    <td>PED-001</td>
+                                    <td>Juan Pérez</td>
+                                    <td>$245.000</td>
+                                    <td>
+                                        <span class="status pending">
+                                            Pendiente
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>PED-002</td>
+                                    <td>Laura Gómez</td>
+                                    <td>$180.000</td>
+                                    <td>
+                                        <span class="status sent">
+                                            Enviado
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>PED-003</td>
+                                    <td>Carlos Ruiz</td>
+                                    <td>$320.000</td>
+                                    <td>
+                                        <span class="status completed">
+                                            Entregado
+                                        </span>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCTOS CON POCO STOCK -->
+                <div class="admin-panel-card">
+
+                    <div class="admin-section-heading">
+                        <h2>Stock bajo</h2>
+                        <a href="inventario.html">Ver inventario</a>
+                    </div>
+
+
+                    <div class="low-stock-list">
+
+                        <div>
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+
+                            <span>
+                                Filtro de aire
+                                <small>2 unidades</small>
+                            </span>
+
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+
+                            <span>
+                                Pastillas de freno
+                                <small>3 unidades</small>
+                            </span>
+
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+
+                            <span>
+                                Bujía
+                                <small>4 unidades</small>
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PIE DEL PANEL -->
+            <footer class="admin-footer">
+
+                © 2026 Mundo Repuestos · Panel administrativo
+
+            </footer>
+
+
+        </main>
+
+    </div>
+
+
+
+</body>
+
+</html>

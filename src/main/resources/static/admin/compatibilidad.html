@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Compatibilidad | Mundo Repuestos</title>
+
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="../styles/compatibilidad.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="admin-body">
+
+<div class="admin-layout">
+
+    <aside class="admin-sidebar">
+
+        <div class="admin-logo">
+            <i class="fa-solid fa-gear"></i>
+            <div>
+                <strong>MUNDO</strong>
+                <strong>REPUESTOS</strong>
+                <small>ADMINISTRACIÓN</small>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <span>MENÚ PRINCIPAL</span>
+        </div>
+
+        <nav class="admin-navigation">
+
+            <a href="panel-principal.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Panel principal</span>
+            </a>
+
+            <a href="productos-admin.html">
+                <i class="fa-solid fa-box"></i>
+                <span>Productos</span>
+            </a>
+
+            <a href="inventario.html">
+                <i class="fa-solid fa-warehouse"></i>
+                <span>Inventario</span>
+            </a>
+
+            <a href="pedidos.html">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span>Pedidos</span>
+            </a>
+
+            <a href="vehiculos.html">
+                <i class="fa-solid fa-car"></i>
+                <span>Vehículos</span>
+            </a>
+
+            <a href="compatibilidad.html" class="active">
+                <i class="fa-solid fa-link"></i>
+                <span>Compatibilidad</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-section">
+            <span>OTROS</span>
+        </div>
+
+        <nav class="admin-navigation">
+            <a href="../index.html">
+                <i class="fa-solid fa-store"></i>
+                <span>Ver tienda</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="admin-profile-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div>
+                <strong>Administrador</strong>
+                <small>Propietario de tienda</small>
+            </div>
+        </div>
+
+    </aside>
+
+
+    <main class="admin-main">
+
+        <header class="admin-topbar">
+
+            <div>
+                <h1>Compatibilidad de repuestos</h1>
+                <p>Relaciona cada repuesto con los vehículos correspondientes.</p>
+            </div>
+
+            <div class="admin-user">
+                <i class="fa-solid fa-circle-user"></i>
+                <div>
+                    <strong>Administrador</strong>
+                    <small>Propietario</small>
+                </div>
+            </div>
+
+        </header>
+
+
+        <section class="compat-welcome">
+
+            <div>
+                <span>APLICACIONES AUTOMOTRICES</span>
+                <h2>Gestión de compatibilidad</h2>
+                <p>
+                    Administra las aplicaciones de tus repuestos
+                    y facilita la búsqueda de tus clientes.
+                </p>
+            </div>
+
+            <i class="fa-solid fa-link"></i>
+
+        </section>
+
+
+        <section class="compat-stats">
+
+            <article class="compat-stat-card">
+                <i class="fa-solid fa-box"></i>
+                <div>
+                    <span>Productos registrados</span>
+                    <h2 id="compat-total-productos">0</h2>
+                </div>
+            </article>
+
+            <article class="compat-stat-card">
+                <i class="fa-solid fa-car"></i>
+                <div>
+                    <span>Vehículos registrados</span>
+                    <h2 id="compat-total-vehiculos">0</h2>
+                </div>
+            </article>
+
+            <article class="compat-stat-card">
+                <i class="fa-solid fa-link"></i>
+                <div>
+                    <span>Relaciones registradas</span>
+                    <h2 id="compat-total-relaciones">0</h2>
+                </div>
+            </article>
+
+        </section>
+
+
+        <section class="compat-editor">
+
+            <div class="compat-heading">
+                <div>
+                    <h2>
+                        <i class="fa-solid fa-sitemap"></i>
+                        Relacionar repuestos y vehículos
+                    </h2>
+                    <p>
+                        Selecciona un producto y marca todos
+                        los vehículos para los que es compatible.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="compat-form">
+
+                <div class="compat-field">
+
+                    <label for="seleccionar-producto">
+                        Seleccionar repuesto
+                    </label>
+
+                    <select id="seleccionar-producto" required>
+                        <option value="">Selecciona un producto</option>
+                    </select>
+
+                </div>
+
+
+                <div class="compat-field">
+
+                    <label for="seleccionar-vehiculos">
+                        Vehículos compatibles
+                    </label>
+
+                    <select
+                        id="seleccionar-vehiculos"
+                        multiple
+                        size="8"
+                    >
+                    </select>
+
+                    <small>
+                        Mantén presionada la tecla Ctrl para seleccionar
+                        varios vehículos en computador.
+                    </small>
+
+                </div>
+
+
+                <!-- CAMPO PARA REGISTRAR OBSERVACIONES DE COMPATIBILIDAD -->
+
+                <div class="compat-field">
+
+                    <label for="observaciones-compatibilidad">
+                        Observaciones
+                    </label>
+
+                    <textarea
+                        id="observaciones-compatibilidad"
+                        rows="3"
+                        maxlength="200"
+                        placeholder="Ej. Compatible con Kia Rio 2020, motor 1.4...">
+                    </textarea>
+
+                    <small>
+                        Agrega información adicional sobre la compatibilidad del repuesto.
+                        Máximo 200 caracteres.
+                    </small>
+
+                </div>
+
+                <div class="compat-actions">
+
+                    <button
+                        type="button"
+                        id="limpiar-compatibilidad"
+                        class="compat-clear-button">
+
+                        <i class="fa-solid fa-rotate-left"></i>
+                        Limpiar selección
+
+                    </button>
+
+                    <button
+                        type="button"
+                        id="guardar-compatibilidad"
+                        class="compat-save-button"
+                        disabled>
+
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Guardar compatibilidad
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="compat-list-section">
+
+            <div class="compat-heading">
+
+                <div>
+                    <h2>Compatibilidades registradas</h2>
+                    <p>
+                        Consulta las aplicaciones asignadas
+                        a cada repuesto.
+                    </p>
+                </div>
+
+                <span id="compat-contador" class="compat-counter">
+                    0 productos
+                </span>
+
+            </div>
+
+
+            <div class="compat-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="search"
+                    id="buscar-compatibilidad"
+                    placeholder="Buscar por producto, referencia o marca..."
+                >
+
+            </div>
+
+
+            <div class="compat-table-container">
+
+                <table class="compat-table">
+
+                    <thead>
+                        <tr>
+                            <th>Repuesto</th>
+                            <th>Referencia</th>
+                            <th>Marca</th>
+                            <th>Vehículos compatibles</th>
+                            <th>Observaciones</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabla-compatibilidad"></tbody>
+
+                </table>
+
+            </div>
+
+
+            <div id="compat-vacio" class="compat-empty">
+
+                <i class="fa-solid fa-link-slash"></i>
+
+                <h3>No hay productos registrados</h3>
+
+                <p>
+                    Primero registra tus repuestos y vehículos
+                    para administrar sus compatibilidades.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <footer class="admin-footer">
+            © 2026 Mundo Repuestos · Gestión de compatibilidad
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="../scripts/compatibilidad.js"></script>
+
+</body>
+</html>

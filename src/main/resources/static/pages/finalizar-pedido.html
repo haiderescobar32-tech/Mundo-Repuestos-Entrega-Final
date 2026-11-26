@@ -1,0 +1,541 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finalizar pedido | Mundo Repuestos</title>
+
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/finalizar-pedido.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+
+        <a href="../index.html" class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-gear"></i>
+            </div>
+
+            <div class="logo-text">
+                <span>MUNDO</span>
+                <strong>REPUESTOS</strong>
+                <small>THE WORLD OF AUTO PARTS</small>
+            </div>
+
+        </a>
+
+        <nav class="navigation">
+            <a href="../index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="../index.html#categorias">Categorías</a>
+            <a href="../index.html#marcas">Marcas</a>
+            <a href="../index.html#promociones">Promociones</a>
+            <a href="../index.html#contacto">Contacto</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <button aria-label="Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <a href="carrito.html" aria-label="Carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+
+            <button aria-label="Mi cuenta">
+                <i class="fa-solid fa-user"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="checkout-page">
+
+        <!-- NAVEGACION -->
+        <div class="checkout-breadcrumb">
+            <a href="../index.html">Inicio</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a href="carrito.html">Carrito</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>Finalizar pedido</span>
+        </div>
+
+
+        <!-- TITULO -->
+        <section class="checkout-heading">
+
+            <span>ÚLTIMO PASO DE TU COMPRA</span>
+
+            <h1>Finalizar <strong>Pedido</strong></h1>
+
+            <p>
+                Completa tus datos y revisa tu compra
+                antes de confirmar el pedido.
+            </p>
+
+        </section>
+
+
+        <!-- DISTRIBUCION -->
+        <form id="checkout-form" class="checkout-layout">
+
+
+            <!-- COLUMNA IZQUIERDA -->
+            <div class="checkout-left">
+
+
+                <!-- DATOS PERSONALES -->
+                <section class="checkout-card">
+
+                    <div class="checkout-card-heading">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <div>
+                            <h2>Datos del cliente</h2>
+                            <p>Información de quien realiza la compra.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="checkout-fields">
+
+                        <div class="checkout-field">
+
+                            <label for="nombre">
+                                Nombres *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Tus nombres"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="checkout-field">
+
+                            <label for="apellidos">
+                                Apellidos *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="apellidos"
+                                name="apellidos"
+                                placeholder="Tus apellidos"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="checkout-field">
+
+                            <label for="tipo-documento">
+                                Tipo de documento *
+                            </label>
+
+                            <select id="tipo-documento"
+                                    name="tipo_documento"
+                                    required>
+
+                                <option value="">Seleccionar</option>
+                                <option value="CC">Cédula de ciudadanía</option>
+                                <option value="CE">Cédula de extranjería</option>
+                                <option value="NIT">NIT</option>
+                                <option value="PASAPORTE">Pasaporte</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="checkout-field">
+
+                            <label for="documento">
+                                Número de documento *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="documento"
+                                name="documento"
+                                placeholder="Número de documento"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="checkout-field">
+
+                            <label for="telefono">
+                                Teléfono *
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="telefono"
+                                name="telefono"
+                                placeholder="Número de contacto"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="checkout-field">
+
+                            <label for="correo">
+                                Correo electrónico *
+                            </label>
+
+                            <input
+                                type="email"
+                                id="correo"
+                                name="correo"
+                                placeholder="correo@ejemplo.com"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- DIRECCION DE ENTREGA -->
+                <section class="checkout-card">
+
+                    <div class="checkout-card-heading">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <div>
+                            <h2>Dirección de entrega</h2>
+                            <p>¿Dónde deseas recibir tus repuestos?</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="checkout-fields">
+
+                        <div class="checkout-field full-width">
+
+                            <label for="direccion">
+                                Dirección *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="direccion"
+                                name="direccion"
+                                placeholder="Calle, carrera, número..."
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="checkout-field">
+
+                            <label for="departamento">
+                                Departamento *
+                            </label>
+
+                            <select
+                                id="departamento"
+                                name="departamento"
+                                required>
+
+                                <option value="">Seleccionar</option>
+                                <option value="Antioquia">Antioquia</option>
+                                <option value="Cundinamarca">Cundinamarca</option>
+                                <option value="Santander">Santander</option>
+                                <option value="Valle del Cauca">Valle del Cauca</option>
+                                <option value="Atlántico">Atlántico</option>
+                                <option value="Bolívar">Bolívar</option>
+                                <option value="Otro">Otro</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="checkout-field">
+
+                            <label for="ciudad">
+                                Ciudad *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="ciudad"
+                                name="ciudad"
+                                placeholder="Ciudad o municipio"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="checkout-field full-width">
+
+                            <label for="indicaciones">
+                                Indicaciones adicionales
+                            </label>
+
+                            <textarea
+                                id="indicaciones"
+                                name="indicaciones"
+                                rows="3"
+                                placeholder="Barrio, apartamento, referencias..."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- METODO DE PAGO -->
+                <section class="checkout-card">
+
+                    <div class="checkout-card-heading">
+
+                        <i class="fa-solid fa-credit-card"></i>
+
+                        <div>
+                            <h2>Método de pago</h2>
+                            <p>Selecciona cómo deseas pagar.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="payment-options">
+
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="metodo_pago"
+                                value="Tarjeta"
+                                required
+                            >
+
+                            <div class="payment-icon">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+
+                            <div class="payment-description">
+                                <strong>Tarjeta de crédito o débito</strong>
+                                <span>Pago electrónico</span>
+                            </div>
+
+                        </label>
+
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="metodo_pago"
+                                value="PSE"
+                            >
+
+                            <div class="payment-icon">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+
+                            <div class="payment-description">
+                                <strong>PSE</strong>
+                                <span>Transferencia bancaria</span>
+                            </div>
+
+                        </label>
+
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="metodo_pago"
+                                value="Transferencia"
+                            >
+
+                            <div class="payment-icon">
+                                <i class="fa-solid fa-money-bill-transfer"></i>
+                            </div>
+
+                            <div class="payment-description">
+                                <strong>Transferencia bancaria</strong>
+                                <span>Pago mediante transferencia</span>
+                            </div>
+
+                        </label>
+
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="metodo_pago"
+                                value="Contraentrega"
+                            >
+
+                            <div class="payment-icon">
+                                <i class="fa-solid fa-truck-fast"></i>
+                            </div>
+
+                            <div class="payment-description">
+                                <strong>Pago contraentrega</strong>
+                                <span>Sujeto a disponibilidad del servicio</span>
+                            </div>
+
+                        </label>
+
+                    </div>
+
+                    <p class="payment-notice">
+                        <i class="fa-solid fa-lock"></i>
+                        Los pagos electrónicos se habilitarán
+                        al conectar nuestra pasarela de pagos.
+                    </p>
+
+                </section>
+
+            </div>
+
+
+            <!-- COLUMNA DERECHA -->
+            <aside class="checkout-summary">
+
+                <h2>Resumen de compra</h2>
+
+
+                <div id="checkout-products">
+
+                    <!-- Productos cargados con JavaScript -->
+
+                </div>
+
+
+                <div class="checkout-summary-divider"></div>
+
+
+                <div class="checkout-summary-line">
+
+                    <span>Subtotal</span>
+
+                    <strong id="checkout-subtotal">$0</strong>
+
+                </div>
+
+
+                <div class="checkout-summary-line">
+
+                    <span>Envío</span>
+
+                    <strong id="checkout-shipping">Por calcular</strong>
+
+                </div>
+
+
+                <div class="checkout-summary-divider"></div>
+
+
+                <div class="checkout-total">
+
+                    <span>Total</span>
+
+                    <strong id="checkout-total">$0</strong>
+
+                </div>
+
+
+                <p class="checkout-summary-note">
+                    El costo de envío se confirmará
+                    según la dirección de entrega.
+                </p>
+
+
+                <button
+                    type="submit"
+                    class="confirm-order-button"
+                    id="confirm-order">
+
+                    <i class="fa-solid fa-check"></i>
+
+                    CONFIRMAR PEDIDO
+
+                </button>
+
+
+                <div class="checkout-security">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    Tus datos serán tratados de forma segura.
+
+                </div>
+
+            </aside>
+
+
+        </form>
+
+    </main>
+
+
+    <!-- PIE DE PAGINA -->
+    <footer class="footer">
+
+        <div class="footer-brand">
+
+            <h2>MUNDO <span>REPUESTOS</span></h2>
+
+            <p>THE WORLD OF AUTO PARTS</p>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            © 2026 Mundo Repuestos. Todos los derechos reservados.
+
+        </div>
+
+    </footer>
+
+
+    <script src="../scripts/finalizar-pedido.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carrito de compras | Mundo Repuestos</title>
+
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/carrito.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+
+        <a href="../index.html" class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-gear"></i>
+            </div>
+
+            <div class="logo-text">
+                <span>MUNDO</span>
+                <strong>REPUESTOS</strong>
+                <small>THE WORLD OF AUTO PARTS</small>
+            </div>
+
+        </a>
+
+        <nav class="navigation">
+
+            <a href="../index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="../index.html#categorias">Categorías</a>
+            <a href="../index.html#marcas">Marcas</a>
+            <a href="../index.html#promociones">Promociones</a>
+            <a href="../index.html#contacto">Contacto</a>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <button aria-label="Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <a href="carrito.html" aria-label="Carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+
+            <button aria-label="Mi cuenta">
+                <i class="fa-solid fa-user"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTENIDO DEL CARRITO -->
+    <main class="cart-page">
+
+        <div class="cart-breadcrumb">
+            <a href="../index.html">Inicio</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>Carrito de compras</span>
+        </div>
+
+
+        <section class="cart-heading">
+
+            <div>
+                <span>REVISA TU SELECCIÓN</span>
+                <h1>Carrito de <strong>Compras</strong></h1>
+                <p>Administra tus repuestos antes de finalizar tu pedido.</p>
+            </div>
+
+            <div class="cart-items-counter">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-items-count">0 productos</span>
+            </div>
+
+        </section>
+
+
+        <div class="cart-layout">
+
+            <!-- PRODUCTOS -->
+            <section class="cart-products-section">
+
+                <div class="cart-products-header">
+                    <h2>Productos seleccionados</h2>
+                    <span id="cart-products-total">0 artículos</span>
+                </div>
+
+                <div id="cart-items">
+
+                    <!-- JavaScript mostrará los productos -->
+
+                </div>
+
+                <a href="catalogo.html" class="continue-shopping">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Seguir comprando
+                </a>
+
+            </section>
+
+
+            <!-- RESUMEN -->
+            <aside class="cart-summary">
+
+                <h2>Resumen del pedido</h2>
+
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <strong id="cart-subtotal">$0</strong>
+                </div>
+
+                <div class="summary-line">
+                    <span>Envío</span>
+                    <strong id="cart-shipping">Por calcular</strong>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <strong id="cart-total">$0</strong>
+                </div>
+
+                <p class="summary-note">
+                    El costo del envío se confirmará según el destino.
+                </p>
+
+                <a href="finalizar-pedido.html"
+                   class="checkout-button"
+                   id="checkout-button">
+
+                    FINALIZAR PEDIDO
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+                <div class="secure-purchase">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Compra confiable
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- PIE DE PAGINA -->
+    <footer class="footer">
+
+        <div class="footer-brand">
+            <h2>MUNDO <span>REPUESTOS</span></h2>
+            <p>THE WORLD OF AUTO PARTS</p>
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Mundo Repuestos. Todos los derechos reservados.
+        </div>
+
+    </footer>
+
+
+    <script src="../scripts/carrito.js"></script>
+
+</body>
+
+</html>

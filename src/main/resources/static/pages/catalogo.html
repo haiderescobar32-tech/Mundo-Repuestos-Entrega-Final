@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catálogo | Mundo Repuestos</title>
+
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/catalogo.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+
+        <a href="../index.html" class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-gear"></i>
+            </div>
+
+            <div class="logo-text">
+                <span>MUNDO</span>
+                <strong>REPUESTOS</strong>
+                <small>THE WORLD OF AUTO PARTS</small>
+            </div>
+        </a>
+
+        <nav class="navigation">
+            <a href="../index.html">Inicio</a>
+            <a href="catalogo.html" class="active">Catálogo</a>
+            <a href="../index.html#categorias">Categorías</a>
+            <a href="../index.html#marcas">Marcas</a>
+            <a href="../index.html#promociones">Promociones</a>
+            <a href="../index.html#contacto">Contacto</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <button aria-label="Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <a href="carrito.html" aria-label="Carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+
+            <button aria-label="Mi cuenta">
+                <i class="fa-solid fa-user"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTENIDO DEL CATALOGO -->
+    <main class="catalog-page">
+
+        <!-- ENCABEZADO DEL CATALOGO -->
+        <section class="catalog-heading">
+
+            <div>
+                <span>ENCUENTRA LO QUE NECESITAS</span>
+
+                <h1>Catálogo de <strong>Repuestos</strong></h1>
+
+                <p>
+                    Explora nuestra colección de repuestos
+                    y encuentra el ideal para tu vehículo.
+                </p>
+            </div>
+
+            <div class="catalog-results">
+                <strong id="products-count">4 productos</strong>
+                <span> disponibles</span>
+            </div>
+
+        </section>
+
+
+        <!-- DISTRIBUCION PRINCIPAL -->
+        <div class="catalog-layout">
+
+
+            <!-- PANEL DE FILTROS -->
+            <aside class="filters-panel">
+
+                <div class="filters-title">
+                    <h2>
+                        <i class="fa-solid fa-sliders"></i>
+                        Filtros
+                    </h2>
+
+                    <button id="clear-filters">
+                        Limpiar
+                    </button>
+                </div>
+
+
+                <!-- BUSCADOR -->
+                <div class="filter-group">
+
+                    <h3>Buscar repuesto</h3>
+
+                    <div class="filter-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="text"
+                            id="search-product"
+                            placeholder="Nombre o referencia..."
+                        >
+                    </div>
+
+                </div>
+
+
+                <!-- CATEGORIAS -->
+                <div class="filter-group">
+
+                    <h3>Categoría</h3>
+
+                    <label>
+                        <input type="checkbox" value="Motor" class="category-filter">
+                        Motor
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Suspensión" class="category-filter">
+                        Suspensión
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Frenos" class="category-filter">
+                        Frenos
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Eléctrico" class="category-filter">
+                        Eléctrico
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Iluminación" class="category-filter">
+                        Iluminación
+                    </label>
+
+                </div>
+
+
+                <!-- MARCAS -->
+                <div class="filter-group">
+
+                    <h3>Marca</h3>
+
+                    <label>
+                        <input type="checkbox" value="Kia Mobis" class="brand-filter">
+                        Kia Mobis
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Bosch" class="brand-filter">
+                        Bosch
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Brembo" class="brand-filter">
+                        Brembo
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Mahle" class="brand-filter">
+                        Mahle
+                    </label>
+
+                </div>
+
+
+                <!-- PRECIO -->
+                <div class="filter-group">
+
+                    <h3>Precio máximo</h3>
+
+                    <input
+                        type="range"
+                        id="price-filter"
+                        min="25000"
+                        max="500000"
+                        value="500000"
+                        step="5000"
+                    >
+
+                    <div class="price-range">
+                        Hasta <strong id="price-value">$500.000</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- DISPONIBILIDAD -->
+                <div class="filter-group">
+
+                    <h3>Disponibilidad</h3>
+
+                    <label>
+                        <input type="checkbox" id="stock-filter">
+                        Solo productos disponibles
+                    </label>
+
+                </div>
+
+
+                <!-- BUSCAR VEHICULO -->
+
+                <div class="vehicle-filter" id="vehiculos">
+
+                    <i class="fa-solid fa-car-side"></i>
+
+                    <h3>¿Buscas por vehículo?</h3>
+
+                    <p>
+                        Selecciona tu vehículo para encontrar
+                        repuestos compatibles.
+                    </p>
+
+                    <div class="vehicle-filter-fields">
+
+                        <select id="filtro-marca-vehiculo">
+                            <option value="">Marca</option>
+                        </select>
+
+                        <select id="filtro-linea-vehiculo" disabled>
+                            <option value="">Línea</option>
+                        </select>
+
+                        <select id="filtro-anio-vehiculo" disabled>
+                            <option value="">Año</option>
+                        </select>
+
+                        <select id="filtro-motor-vehiculo" disabled>
+                            <option value="">Motor</option>
+                        </select>
+
+                    </div>
+
+                    <button type="button" id="buscar-por-vehiculo" disabled>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Buscar repuestos
+                    </button>
+
+                    <button type="button"
+                            id="limpiar-filtro-vehiculo"
+                            class="clear-vehicle-filter">
+                        Ver todos los productos
+                    </button>
+
+                </div>
+
+            </aside>
+
+
+            <!-- ZONA DE PRODUCTOS -->
+            <section class="catalog-products">
+
+                <div class="catalog-toolbar">
+
+                    <div>
+                        <h2>Todos los productos</h2>
+                        <p>Encuentra el repuesto que necesitas.</p>
+                    </div>
+
+                    <select id="sort-products">
+
+                        <option value="default">Destacados</option>
+                        <option value="price-low">Menor precio</option>
+                        <option value="price-high">Mayor precio</option>
+                        <option value="name">Nombre A-Z</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- PRODUCTOS -->
+                <div class="catalog-grid" id="catalog-products">
+
+                    <!-- JavaScript cargará los productos aquí -->
+
+                </div>
+
+
+                <!-- PAGINACION -->
+                <div class="catalog-pagination" id="catalog-pagination">
+
+                    <button disabled>
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="current-page">1</button>
+
+                    <button disabled>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- PIE DE PAGINA -->
+    <footer class="footer">
+
+        <div class="footer-brand">
+            <h2>MUNDO <span>REPUESTOS</span></h2>
+            <p>THE WORLD OF AUTO PARTS</p>
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Mundo Repuestos. Todos los derechos reservados.
+        </div>
+
+    </footer>
+
+
+    <script src="../scripts/catalogo.js"></script>
+
+</body>
+
+</html>

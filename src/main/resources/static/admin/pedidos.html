@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Administrar pedidos | Mundo Repuestos</title>
+
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="../styles/pedidos.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="admin-body">
+
+    <div class="admin-layout">
+
+        <!-- MENU LATERAL -->
+        <aside class="admin-sidebar">
+
+            <div class="admin-logo">
+                <i class="fa-solid fa-gear"></i>
+
+                <div>
+                    <strong>MUNDO</strong>
+                    <strong>REPUESTOS</strong>
+                    <small>ADMINISTRACIÓN</small>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <span>MENÚ PRINCIPAL</span>
+            </div>
+
+            <nav class="admin-navigation">
+
+                <a href="panel-principal.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Panel principal</span>
+                </a>
+
+                <a href="productos-admin.html">
+                    <i class="fa-solid fa-box"></i>
+                    <span>Productos</span>
+                </a>
+
+                <a href="inventario.html">
+                    <i class="fa-solid fa-warehouse"></i>
+                    <span>Inventario</span>
+                </a>
+
+                <a href="pedidos.html" class="active">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Pedidos</span>
+                </a>
+
+                <a href="vehiculos.html">
+                    <i class="fa-solid fa-car"></i>
+                    <span>Vehículos</span>
+                </a>
+
+                <a href="compatibilidad.html">
+                    <i class="fa-solid fa-link"></i>
+                    <span>Compatibilidad</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-section">
+                <span>OTROS</span>
+            </div>
+
+            <nav class="admin-navigation">
+
+                <a href="../index.html">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Ver tienda</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <div class="admin-profile-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div>
+                    <strong>Administrador</strong>
+                    <small>Propietario de tienda</small>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="admin-main">
+
+            <header class="admin-topbar">
+
+                <div>
+                    <h1>Administración de pedidos</h1>
+                    <p>Consulta y gestiona las compras de tus clientes.</p>
+                </div>
+
+                <div class="admin-top-actions">
+
+                    <div class="admin-user">
+                        <i class="fa-solid fa-circle-user"></i>
+
+                        <div>
+                            <strong>Administrador</strong>
+                            <small>Propietario</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- BIENVENIDA -->
+            <section class="orders-welcome">
+
+                <div>
+                    <span>GESTIÓN COMERCIAL</span>
+
+                    <h2>Control de pedidos</h2>
+
+                    <p>
+                        Consulta las compras recibidas, revisa los datos
+                        de tus clientes y administra las entregas.
+                    </p>
+                </div>
+
+                <i class="fa-solid fa-clipboard-check"></i>
+
+            </section>
+
+
+            <!-- ESTADISTICAS -->
+            <section class="orders-stats">
+
+                <article class="order-stat-card">
+                    <div class="order-stat-icon yellow">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </div>
+
+                    <div>
+                        <span>Total pedidos</span>
+                        <h2 id="total-pedidos-admin">0</h2>
+                        <small>Pedidos registrados</small>
+                    </div>
+                </article>
+
+
+                <article class="order-stat-card">
+                    <div class="order-stat-icon orange">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <div>
+                        <span>Pendientes</span>
+                        <h2 id="pedidos-pendientes">0</h2>
+                        <small>Por gestionar</small>
+                    </div>
+                </article>
+
+
+                <article class="order-stat-card">
+                    <div class="order-stat-icon blue">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+
+                    <div>
+                        <span>En proceso</span>
+                        <h2 id="pedidos-proceso">0</h2>
+                        <small>En preparación o envío</small>
+                    </div>
+                </article>
+
+
+                <article class="order-stat-card">
+                    <div class="order-stat-icon green">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <span>Entregados</span>
+                        <h2 id="pedidos-entregados">0</h2>
+                        <small>Compras completadas</small>
+                    </div>
+                </article>
+
+            </section>
+
+
+            <!-- TABLA DE PEDIDOS -->
+            <section class="orders-section">
+
+                <div class="orders-heading">
+
+                    <div>
+                        <h2>Pedidos recibidos</h2>
+
+                        <p>
+                            Consulta los pedidos y actualiza
+                            su estado de gestión.
+                        </p>
+                    </div>
+
+                    <span id="cantidad-pedidos" class="orders-counter">
+                        0 pedidos
+                    </span>
+
+                </div>
+
+
+                <!-- BUSCADOR Y FILTROS -->
+                <div class="orders-filters">
+
+                    <div class="orders-search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="search"
+                            id="buscar-pedido"
+                            placeholder="Buscar por número de pedido o cliente..."
+                        >
+
+                    </div>
+
+
+                    <select id="filtro-estado">
+
+                        <option value="todos">Todos los estados</option>
+                        <option value="Pendiente">Pendiente</option>
+                        <option value="Confirmado">Confirmado</option>
+                        <option value="En preparación">En preparación</option>
+                        <option value="Enviado">Enviado</option>
+                        <option value="Entregado">Entregado</option>
+                        <option value="Cancelado">Cancelado</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- TABLA -->
+                <div class="orders-table-container">
+
+                    <table class="orders-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Número</th>
+                                <th>Fecha</th>
+                                <th>Cliente</th>
+                                <th>Teléfono</th>
+                                <th>Total</th>
+                                <th>Pago</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="tabla-pedidos">
+
+                            <!-- JavaScript cargará los pedidos -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- MENSAJE VACIO -->
+                <div id="pedidos-vacios" class="orders-empty">
+
+                    <i class="fa-solid fa-clipboard-list"></i>
+
+                    <h3>No hay pedidos registrados</h3>
+
+                    <p>
+                        Cuando tus clientes realicen compras,
+                        aparecerán aquí.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- MODAL DETALLE -->
+            <div id="modal-pedido" class="order-modal" hidden>
+
+                <div class="order-modal-content">
+
+                    <div class="order-modal-header">
+
+                        <h2>Detalle del pedido</h2>
+
+                        <button type="button" id="cerrar-modal">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+
+                    </div>
+
+                    <div id="detalle-pedido-contenido">
+
+                        <!-- JavaScript mostrará la información -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <footer class="admin-footer">
+                © 2026 Mundo Repuestos · Administración de pedidos
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="../scripts/pedidos.js"></script>
+
+</body>
+</html>

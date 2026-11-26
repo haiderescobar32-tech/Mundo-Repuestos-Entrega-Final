@@ -1,0 +1,500 @@
+
+/* ==========================================
+   MUNDO REPUESTOS - COMPATIBILIDAD
+   ========================================== */
+
+
+/* BIENVENIDA */
+
+.compat-welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 28px 32px;
+    margin-bottom: 25px;
+
+    background: linear-gradient(110deg, #202832, #121820);
+    border: 1px solid #303a46;
+    border-radius: 12px;
+}
+
+.compat-welcome span {
+    color: var(--color-primary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.compat-welcome h2 {
+    color: white;
+    font-size: 23px;
+    margin: 9px 0;
+}
+
+.compat-welcome p {
+    color: #aeb8c5;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.compat-welcome > i {
+    color: var(--color-primary);
+    font-size: 55px;
+}
+
+
+/* ESTADISTICAS */
+
+.compat-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-bottom: 28px;
+}
+
+.compat-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 20px;
+
+    background: #171d25;
+    border: 1px solid #29313b;
+    border-radius: 10px;
+}
+
+.compat-stat-card > i {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(245,184,0,.13);
+    color: var(--color-primary);
+
+    border-radius: 9px;
+    font-size: 19px;
+}
+
+.compat-stat-card span {
+    color: #aeb8c5;
+    font-size: 11px;
+}
+
+.compat-stat-card h2 {
+    color: white;
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+
+/* SECCIONES */
+
+.compat-editor,
+.compat-list-section {
+    padding: 25px;
+    margin-bottom: 27px;
+
+    background: #171d25;
+    border: 1px solid #29313b;
+    border-radius: 11px;
+}
+
+.compat-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 23px;
+}
+
+.compat-heading h2 {
+    color: white;
+    font-size: 17px;
+}
+
+.compat-heading h2 i {
+    color: var(--color-primary);
+    margin-right: 8px;
+}
+
+.compat-heading p {
+    color: #8993a0;
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+
+/* FORMULARIO */
+
+.compat-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.compat-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.compat-field label {
+    color: #e4e7eb;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.compat-field select {
+    width: 100%;
+    padding: 13px;
+
+    background: #0e1218;
+    border: 1px solid #343d49;
+    border-radius: 7px;
+
+    color: white;
+    font-size: 12px;
+    outline: none;
+}
+
+.compat-field select:focus {
+    border-color: var(--color-primary);
+}
+
+.compat-field select:disabled {
+    opacity: .5;
+}
+
+.compat-field select option {
+    padding: 9px;
+    background: #171d25;
+    color: white;
+}
+
+.compat-field select[multiple] {
+    min-height: 190px;
+}
+
+.compat-field select[multiple] option:checked {
+    background: #f5b800;
+    color: #111;
+}
+
+.compat-field small {
+    color: #8993a0;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+/* OBSERVACIONES */
+
+#observaciones-compatibilidad {
+    width: 100%;
+    min-height: 90px;
+    padding: 12px 14px;
+
+    background-color: #0e1218;
+    color: #ffffff;
+
+    border: 1px solid #343d49;
+    border-radius: 7px;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+
+    resize: vertical;
+    outline: none;
+
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+#observaciones-compatibilidad::placeholder {
+    color: #8993a0;
+}
+
+#observaciones-compatibilidad:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(245, 184, 0, 0.12);
+}
+
+
+/* BOTONES */
+
+.compat-actions {
+    grid-column: 1 / -1;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+
+    padding-top: 20px;
+    border-top: 1px solid #303a46;
+}
+
+.compat-actions button {
+    min-height: 44px;
+    padding: 11px 19px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: 800;
+
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.compat-save-button {
+    background: var(--color-primary);
+    color: #111;
+    border: none;
+}
+
+.compat-save-button:hover:not(:disabled) {
+    background: var(--color-primary-hover);
+    transform: translateY(-2px);
+}
+
+.compat-save-button:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+
+.compat-clear-button {
+    background: transparent;
+    border: 1px solid #46515f;
+    color: #c5cbd3;
+}
+
+.compat-clear-button:hover {
+    background: #252d38;
+}
+
+
+/* CONTADOR */
+
+.compat-counter {
+    padding: 10px 14px;
+    background: #252d38;
+    border-radius: 7px;
+
+    color: var(--color-primary);
+    font-size: 11px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+
+/* BUSCADOR */
+
+.compat-search {
+    width: 100%;
+    max-width: 520px;
+
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    padding: 12px 15px;
+    margin-bottom: 20px;
+
+    background: #10151c;
+    border: 1px solid #343d49;
+    border-radius: 7px;
+}
+
+.compat-search i {
+    color: var(--color-primary);
+}
+
+.compat-search input {
+    width: 100%;
+    min-width: 0;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: white;
+    font-size: 12px;
+}
+
+.compat-search input::placeholder {
+    color: #737d89;
+}
+
+
+/* TABLA */
+
+.compat-table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.compat-table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.compat-table th {
+    padding: 15px 12px;
+
+    background: #202630;
+    color: #8993a0;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    border-bottom: 1px solid #343d49;
+}
+
+.compat-table td {
+    padding: 15px 12px;
+
+    color: #d4d9e0;
+    font-size: 11px;
+    line-height: 1.7;
+
+    border-bottom: 1px solid #29313b;
+}
+
+.compat-table tbody tr:hover {
+    background: #202630;
+}
+
+.compat-product-name {
+    color: white;
+    font-weight: 800;
+}
+
+.compat-vehicle-tag {
+    display: inline-block;
+    margin: 2px;
+    padding: 4px 7px;
+
+    background: rgba(245,184,0,.12);
+    color: var(--color-primary);
+
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+
+/* ACCIONES */
+
+.compat-actions-table {
+    display: flex;
+    gap: 7px;
+}
+
+.compat-actions-table button {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #252d38;
+    color: #60a5fa;
+
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.compat-actions-table button:hover {
+    background: var(--color-primary);
+    color: #111;
+}
+
+
+/* VACIO */
+
+.compat-empty {
+    display: none;
+    padding: 45px 20px;
+    text-align: center;
+    background: #10151c;
+    border-radius: 9px;
+}
+
+.compat-empty i {
+    color: var(--color-primary);
+    font-size: 40px;
+    margin-bottom: 14px;
+}
+
+.compat-empty h3 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.compat-empty p {
+    color: #8993a0;
+    font-size: 11px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .compat-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .compat-welcome {
+        padding: 18px;
+    }
+
+    .compat-welcome h2 {
+        font-size: 19px;
+    }
+
+    .compat-welcome > i {
+        font-size: 35px;
+    }
+
+    .compat-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .compat-editor,
+    .compat-list-section {
+        padding: 15px;
+    }
+
+    .compat-form {
+        grid-template-columns: 1fr;
+    }
+
+    .compat-actions {
+        flex-direction: column;
+    }
+
+    .compat-actions button {
+        width: 100%;
+    }
+
+}
